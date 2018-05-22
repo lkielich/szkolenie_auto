@@ -74,7 +74,7 @@
                     </includes>
                     <properties>
                         <includeTags>
-                            $(tests) <!-- mvn clean install -Dtests=
+                            $(tests) <!-- mvn clean install -Dtests -->
                         </includeTags>
                     </properties>
                 </configuration>
