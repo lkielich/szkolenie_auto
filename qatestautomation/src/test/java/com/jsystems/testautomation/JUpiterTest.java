@@ -72,7 +72,7 @@ public class JUpiterTest extends ConfigJUpiter {
         assertEquals(myString, "First Test");
         assertSame(myString, "First Test");
 
-        //przypisanie wyniku do wartosci 'double'
+        //przypisanie wyniku do wartosci 'double' poniewaz 0.2*0.2 != 0.04
         assertTrue(new BigDecimal("0.2").multiply(new BigDecimal(("0.2"))).doubleValue() == 0.04);
 
     }

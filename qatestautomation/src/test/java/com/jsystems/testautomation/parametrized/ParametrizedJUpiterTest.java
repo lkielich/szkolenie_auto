@@ -66,7 +66,7 @@ public class ParametrizedJUpiterTest extends ConfigJunit {
 
     GamePlay gamePlay = new GamePlay();
 
-    @Tag("all)")
+    @Tag("all")
     @Test
     @DisplayName("Test for checking if exception is thrown")
     public void exceptionTest(){
