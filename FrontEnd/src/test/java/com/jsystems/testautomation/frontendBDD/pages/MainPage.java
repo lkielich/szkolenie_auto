@@ -1,7 +1,6 @@
-package com.jsystems.testautomation.pages;
+package com.jsystems.testautomation.frontendBDD.pages;
 
-import com.jsystems.testautomation.TestDataHelper;
-import org.jsoup.Connection;
+import com.jsystems.testautomation.frontendFactory.TestDataHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +13,6 @@ public class MainPage extends BasePage {
 
     public MainPage(WebDriver driver) {
         super(driver);
-        this.driver=driver;
         PageFactory.initElements(driver, this);
 
     }
