@@ -1,18 +1,16 @@
 package com.jsystems.api.models;
 
-public class Person {
+public class TestUserGeneric<T> {
+
+    public T id;
     public String name;
     public String surname;
 
-    public Person(String name, String surname) {
-        this.name = name;
-        this.surname = surname;
-    }
-
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
+        return "TestUserGeneric{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 '}';
     }

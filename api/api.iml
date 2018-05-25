@@ -21,7 +21,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-api:1.7.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.jcabi:jcabi-aspects:0.22" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.aspectj:aspectjrt:1.8.4" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: javax.validation:validation-api:1.1.0.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.2.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.jaxb:jaxb-core:2.2.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.jaxb:txw2:2.2.11" level="project" />
@@ -51,5 +50,7 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.3" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.3" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.3" level="project" />
+    <orderEntry type="library" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.validation:validation-api:2.0.1.Final" level="project" />
   </component>
 </module>
