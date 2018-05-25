@@ -1,6 +1,7 @@
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jsystems.api.Specificator;
+import com.jsystems.api.models.FakeBook;
 import com.jsystems.api.models.Person;
 import com.jsystems.api.models.TestUserGeneric;
 import com.jsystems.api.models.UserDevice;
@@ -186,7 +187,7 @@ public class ApiTest {
     }
 
     @Test
-    @DisplayName("Test of generic user")
+    @DisplayName("Test of generic user with integer")
     public void genericTypeTest() throws IOException {
 
         Response response = TestResponse.responseWithListByUrl("5b05bf3f3200007100ebfa04");
@@ -203,4 +204,44 @@ public class ApiTest {
 
         assertTrue(testUserGeneric.id==1);
     }
+
+    @Test
+    @DisplayName("Test of generic user with String")
+    public void genericTypeTestwithString() throws IOException {
+
+        Response response = TestResponse.responseWithListByUrl("5b05c83e3200009700ebfa2b");
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        TestUserGeneric<String> testUserGeneric = objectMapper.readValue(
+                response
+                        .then()
+                        .extract()
+                        .body()
+                        .asInputStream(), new TypeReference<TestUserGeneric<String>>(){});
+
+        System.out.println(testUserGeneric);
+
+        assertTrue(testUserGeneric.id.equals("1a"));
+    }
+
+    @Test
+    @DisplayName("GET: /api/Books - Tests of Books")
+    public void fakeBookTest() {
+
+      Response response = TestResponse.responseFakeRestApiBook("api/Books/{id}", 1);
+//    Response response RestAssured
+//            .given()
+//            .spec(Specyficator.requestSpecificationFaker)
+//                .when()
+//                .get("api/Books/{id}", 1)
+//                .andReturn();
+
+        FakeBook book = response
+                .then()
+                .extract()
+                .body()
+                .as(FakeBook.class);
+
+    }
+
 }

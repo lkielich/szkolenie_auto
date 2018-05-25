@@ -11,4 +11,8 @@ public class Specificator {
             .setBasePath("v2")
             .build();
 
+    public static RequestSpecification requestSpecificationFaker = new RequestSpecBuilder()
+            .setContentType(ContentType.JSON)
+            .setBaseUri("http://faketestapi.azurewebsites.net")
+            .build();
 }

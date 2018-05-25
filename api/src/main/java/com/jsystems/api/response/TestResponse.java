@@ -24,8 +24,6 @@ public class TestResponse {
                 .when()
                 .get(url)
                 .andReturn();
-
-
     }
 
     public static Response responsePost(String url, Person body) {
@@ -38,4 +36,13 @@ public class TestResponse {
                 .andReturn();
     }
 
+    public static Response responseFakeRestApiBook(String url, int id) {
+        return RestAssured
+                .given()
+                .spec(Specificator.requestSpecification)
+                .when()
+                .get(url, id)
+                .andReturn();
+
+    }
 }
